@@ -1,0 +1,14 @@
+.hoverEf {
+  border: 2px solid black;
+  padding: 8px 10px;
+  border-radius: 3px;
+  color: black;
+  font-weight: bolder;
+}
+.hoverEf:hover {
+  background-color: #0c0c0c61;
+  padding: 8px 10px;
+  border: 2px solid white;
+  color: aliceblue;
+  border-radius: 3px;
+}
