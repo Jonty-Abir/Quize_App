@@ -1,13 +1,14 @@
+import { nanoid } from "nanoid";
 import { useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { Link } from "react-router-dom";
 import useVideoList from "../Hooks/useVideoList";
 import Video from "./Video";
 
+
 export default function Videoes() {
   const [page, setPage] = useState(1);
   const { error, loading, videos, hasMore } = useVideoList(page);
-
   //
   return (
     <div>
@@ -25,11 +26,8 @@ export default function Videoes() {
                   pathname: `/quiz/${video.youtubeID}`,
                   state: { videoTitle: video.title },
                 }}
-                key={`${video.youtubeID}-${
-                  index || "custom_index"
-                }-${Math.floor(Math.random() * 2210 + 1)}-${Math.floor(
-                  Math.random() * 1110 + 1
-                )}`}
+                key={nanoid()}
+                // {console.log(nanoid())}
               >
                 <Video
                   title={video.title}

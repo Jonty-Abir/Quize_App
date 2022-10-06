@@ -76,44 +76,6 @@
   transition: all 0.3s ease;
   user-select: none;
 }
-@media only screen and (min-width: 1033px) and (max-width: 1536px) {
-  .miniPlayer {
-    transition: transform 0.3s ease;
-  }
-  .floatingBtn {
-    top: 104%;
-    /* background-color: yellow; */
-  }
-}
-@media only screen and (min-width: 1032px) and (max-width: 1231px) {
-  .miniPlayer {
-    transition: transform 0.3s ease;
-  }
-  .floatingBtn {
-    top: 115%;
-  }
-}
-
-@media only screen and (max-width: 687px) {
-  .miniPlayer {
-    transition: transform 0.3s ease;
-  }
-  .floatingBtn {
-    top: 175%;
-    left: 84%;
-    /* background-color: green; */
-  }
-}
-@media only screen and (min-width: 688px) and (max-width: 1031px) {
-  .miniPlayer {
-    transition: transform 0.3s ease;
-  }
-  .floatingBtn {
-    top: 175%;
-    left: 90%;
-    /* background-color: red; */
-  }
-}
 
 .floatingBtn:hover {
   background-color: var(--successGreen);
@@ -143,4 +105,91 @@
 
 .floatingBtn .close {
   display: none;
+}
+
+/* for small mobile */
+
+@media only screen and (min-width: 380px) and (max-width: 550px) {
+  .miniPlayer {
+    transition: transform 0.3s ease;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+  }
+  .floatingBtn {
+    top: 62rem;
+    left: 64%;
+  }
+}
+
+/* large mobile */
+
+@media only screen and (min-width: 551px) and (max-width: 750px) {
+  .miniPlayer {
+    transition: transform 0.3s ease;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+  }
+  .floatingBtn {
+    top: 60rem;
+    left: 72%;
+    background-color: red;
+  }
+}
+
+/* tab */
+
+@media only screen and (min-width: 751px) and (max-width: 1050px) {
+  .miniPlayer {
+    transition: transform 0.3s ease;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+  }
+  .floatingBtn {
+    top: 60rem;
+    left: 72%;
+    /* background-color: rgb(0, 255, 51); */
+  }
+}
+
+/* laptop */
+@media only screen and (min-width: 1023px) and (max-width: 1350px) {
+  .miniPlayer {
+    transition: transform 0.3s ease;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+  }
+  .floatingBtn {
+    top: 39rem;
+    left: 72%;
+    /* background-color: rgb(226, 31, 230); */
+  }
+}
+/* large desktop*/
+
+@media only screen and (min-width: 1351px) {
+  .miniPlayer {
+    transition: transform 0.3s ease;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+  }
+  .floatingBtn {
+    top: 39rem;
+    left: 72%;
+    /* background-color: rgb(226, 31, 230); */
+  }
 }

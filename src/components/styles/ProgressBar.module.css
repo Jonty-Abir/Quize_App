@@ -34,36 +34,6 @@
   background: #47f5953a;
 }
 
-@media only screen and (max-width: 1024px) {
-  .progressBar {
-    width: calc(100vw - 60px);
-    bottom: 10px;
-  }
-  .progressBar .backButton {
-    width: 40px;
-    height: 40px;
-  }
-
-  .next span:first-child {
-    display: none;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .progressBar {
-    /* width: calc(100vw - 60px); */
-    margin: 10px auto;
-    top: 190%;
-  }
-}
-@media only screen and (max-width: 687px) {
-  .progressBar {
-    /* width: calc(100vw - 60px); */
-    margin: 10px auto;
-    bottom: -25%;
-    /* background-color: red; */
-  }
-}
-
 .rangeArea {
   width: 100%;
   position: relative;
@@ -125,4 +95,59 @@
   left: 50%;
   position: absolute;
   transform: rotate(45deg) translate(-50%, 100%);
+}
+
+/* for small mobile */
+@media only screen and (min-width: 380px) and (max-width: 550px) {
+  .progressBar {
+    left: 12%;
+    top: 60rem;
+  }
+}
+/* large mobile */
+
+@media only screen and (min-width: 551px) and (max-width: 750px) {
+  .progressBar {
+    left: 8%;
+    top: 58rem;
+    /* background-color: red; */
+  }
+}
+/* tab */
+
+@media only screen and (min-width: 751px) and (max-width: 1022px) {
+  .progressBar {
+    left: 0rem;
+    right: 0rem;
+    margin-left: auto;
+    margin-right: auto;
+    top: 58rem;
+    /* background-color: rgb(0, 255, 64); */
+  }
+}
+
+/* laptop */
+
+@media only screen and (min-width: 1023px) and (max-width: 1350px) {
+  .progressBar {
+    left: 0rem;
+    right: 0rem;
+    margin-left: auto;
+    margin-right: auto;
+    top: 38rem;
+    /* background-color: rgb(244, 16, 225); */
+  }
+}
+
+/* large destop */
+
+@media only screen and (min-width: 1351px) {
+  .progressBar {
+    left: 0rem;
+    right: 0rem;
+    margin-left: auto;
+    margin-right: auto;
+    top: 38rem;
+    /* background-color: rgb(13, 244, 236); */
+  }
 }

@@ -27,7 +27,7 @@ export default function useVideoList(contentNo) {
         videosRef,
         orderByKey(),
         startAt("" + contentNo),
-        limitToFirst(3)
+        limitToFirst(6)
       );
       try {
         setError(false);
