@@ -1,5 +1,7 @@
+import { Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { AuthProvider } from "./contex/AuthContex";
+import CreateQuize from "./CREAT_QUIZE/CreateQuize";
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -14,21 +16,24 @@ import "./styles/style.css";
 //
 function App() {
   return (
-    <Router>
-      <AuthProvider>
-        <Layout>
-          <Switch>
-            <PrivateRoute exact path="/" component={Home} />
-            <PrivateRoute exact path="/result/:id" component={Result} />
-            <PublicRoute exact path="/login" component={Login} />
-            <PrivateRoute exact path="/quiz/:id" component={Quiz} />
-            <PublicRoute exact path="/signup" component={Signup} />
+    <Suspense fallback="Loading...">
+      <Router>
+        <AuthProvider>
+          <Layout>
+            <Switch>
+              <PrivateRoute exact path="/" component={Home} />
+              <PrivateRoute exact path="/result/:id" component={Result} />
+              <PublicRoute exact path="/login" component={Login} />
+              <PrivateRoute exact path="/quiz/:id" component={Quiz} />
+              <PublicRoute exact path="/signup" component={Signup} />
+              <PrivateRoute exact path="/custom" component={CreateQuize}/>
 
-            <Route component={NotFound} />
-          </Switch>
-        </Layout>
-      </AuthProvider>
-    </Router>
+              <Route component={NotFound} />
+            </Switch>
+          </Layout>
+        </AuthProvider>
+      </Router>
+    </Suspense>
   );
 }
 

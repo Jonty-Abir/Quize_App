@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import { Fragment } from "react";
 import CheckBox from "./CheckBox";
 import Classes from "./styles/Answers.module.css";
@@ -5,7 +6,7 @@ export default function Answers({ opstions = [], onHandle, input }) {
   return (
     <div className={Classes.answers}>
       {opstions.map((option, index) => (
-        <Fragment key={index}>
+        <Fragment key={nanoid()}>
           {input ? (
             <CheckBox
               key={index}

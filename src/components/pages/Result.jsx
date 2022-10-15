@@ -10,7 +10,6 @@ export default function Result() {
   const { state } = location;
   const { qna } = state;
   const { loading, error, answers } = useAnswers(id);
-
   // calculate score
   function calculate() {
     let score = 0;
@@ -18,7 +17,6 @@ export default function Result() {
       let currectIndex = [];
       let checkedIndex = [];
       // create two array for comparire
-
       questions.options.forEach((options, index2) => {
         if (options.correct) currectIndex.push(index2);
         if (qna[index1].options[index2].checked) {
@@ -28,7 +26,7 @@ export default function Result() {
       });
       if (_.isEqual(currectIndex, checkedIndex)) {
         score += 5;
-      }
+      } 
     });
     return score;
   }

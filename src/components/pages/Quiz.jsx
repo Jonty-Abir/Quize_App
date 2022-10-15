@@ -33,8 +33,8 @@ const reduccer = (state, action) => {
 export default function Quiz() {
   const { currentUser } = useAuth();
   const history = useHistory();
-  const {location}=useHistory();
-  const {state}=location;
+  const { location } = useHistory();
+  const { state } = location;
   const { id } = useParams();
   const { loading, error, questions } = useQuestion(id);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -100,13 +100,12 @@ export default function Quiz() {
             onHandle={handleAnswerChange}
             input={true}
           />
-          
+
           <ProgressBar
             next={next}
             prev={prev}
             progress={parcentage}
             submit={submit}
-            
           />
           <MiniPlayer url={id} title={state.videoTitle} />
         </>

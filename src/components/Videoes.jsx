@@ -17,7 +17,7 @@ export default function Videoes() {
           dataLength={videos.length}
           hasMore={hasMore}
           loader="Loading..."
-          next={() => setPage(page + 1)}
+          next={() => setPage(page + 6)}
         >
           {videos.map((video, index) =>
             video.noq > 0 ? (
@@ -36,7 +36,7 @@ export default function Videoes() {
                 />
               </Link>
             ) : (
-              <Video title={video.title} id={video.youtubeID} noq={video.noq} />
+              <Video key={nanoid()} title={video.title} id={video.youtubeID} noq={video.noq} />
             )
           )}
         </InfiniteScroll>

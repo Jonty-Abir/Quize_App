@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0");
+
+/* .quizeDiv {
+  width: 100%;
+  height: auto;
+  background-color: rgb(245, 235, 220);
+  position: relative;
+  left: 0rem;
+  right: 0rem;
+  margin-left: auto;
+  margin-right: auto;
+} */
+/* .input {
+  padding: 3px 5px;
+  margin: 0px 10px 10px 0px;
+} */
+
+/* .btnQuize {
+  width: 100%;
+}
+
+.first {
+  width: auto;
+  display: flex;
+  margin: 0rem 1rem;
+}
+.sce {
+  width: auto;
+  margin: 0rem 1rem;
+} */
+input[type="checkbox"]:checked {
+  background: red;
+}

@@ -1,0 +1,22 @@
+.span {
+  border-radius: 3px;
+  padding: 6px 10px;
+  margin: 1px 3px;
+  width: 100%;
+}
+.label {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: 2px solid #006699;
+  border-radius: 3px;
+  padding: 1px 4px;
+  margin: 1px 3px;
+  margin-bottom: 10px;
+  background-color: #e6ffff;
+}
+.quizFrom {
+  border: 2px dotted black;
+  padding: 5px;
+  border-radius: 3px;
+}

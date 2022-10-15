@@ -23,7 +23,9 @@ export default function Summary({ userScore, naq }) {
       Authorization: process.env.REACT_APP_PEXELS_API_KEY,
     }
   );
-  const img = result ? result?.photos[0].src.large : successImg;
+  // console.log(result)
+  // result ? result?.photos[0].src.large :
+  const img = result ? result?.photos[0].src.large :successImg;
   return (
     <div className={`${Classes.summary}`}>
       <div className={`${Classes.point}`}>

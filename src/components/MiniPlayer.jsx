@@ -5,6 +5,7 @@ import Classes from "./styles/MiniBar.module.css";
 export default function MiniPlayer({ url, title }) {
   const [state, setState] = useState(false);
   const buttonRef = useRef(null);
+
   const videoUrl = `https://www.youtube.com/watch?v=${url}`;
   function toggleMiniPlayer() {
     if (!state) {
